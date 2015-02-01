@@ -18,7 +18,6 @@ class linked_list
              void append(int);
              void print();
              void reverse();
-             void merge(linked_list);
 };
 
 void linked_list::append(int n)
@@ -71,18 +70,10 @@ void linked_list::reverse()
      print();
 }
 
-void linked_list::merge(linked_list l)
-{
-     node * temp1 = start;
-     node * temp2 = l.start;
-     cout<<"l.start = "<<l.start->elem<<endl;    
- 
-     print();
-}
 
 int main()
 {
-    linked_list l1,l2;
+    linked_list l;
     int option;
     int number;
         
@@ -91,10 +82,8 @@ int main()
 
     cout<<"\n****************************"<<endl;
     cout<<"1.append"<<endl;
-    cout<<"2.append one more list"<<endl;
-    cout<<"3.print"<<endl;
-    cout<<"4.reverse"<<endl;
-    cout<<"5.merge"<<endl;    
+    cout<<"2.print"<<endl;
+    cout<<"3.reverse"<<endl;
     cout<<"0.exit"<<endl;
     cout<<"****************************"<<endl;
     cout<<"enter an option: ";
@@ -102,29 +91,19 @@ int main()
     
     switch(option)
     {
+         // appending operation to linked list
          case 1:
               cout<<"enter the number to append = ";
               cin>>number;  
-              l1.append(number);
+              l.append(number);
               break;
 
-         case 2:
-              cout<<"enter the number to append = ";
-              cin>>number;  
-              l2.append(number); 
-              break;
-
-         case 3: 
-              l1.print();
-              l2.print();
+         case 2: 
+              l.print();
               break;
          
-         case 4:
-              l1.reverse();
-              break;
-              
-         case 5:
-              l1.merge(l2);
+         case 3:
+              l.reverse();
               break;
               
          case 0:

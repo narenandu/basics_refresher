@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream.h>
 
 int bitsOn(int val)
 {
@@ -13,8 +13,8 @@ int bitsOn(int val)
 
 int main()
 {
-	int num;
-	cout<<"enter a number:";
-	cin>>num;
+    int num;
+    cout<<"enter a number:";
+    cin>>num;
     cout<<endl<<"there are "<<bitsOn(num)<<" of 1s in its binary form"<<endl;
 }
